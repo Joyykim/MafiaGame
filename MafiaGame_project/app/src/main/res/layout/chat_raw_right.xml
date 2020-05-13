@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/LinearLayout_chat">
+
+    <TextView
+        android:id="@+id/TextView_chat_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="5dp"
+        android:paddingTop="2dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="2dp"
+        android:textSize="45px"
+        android:text="NAME"
+        android:gravity="end"
+        />
+
+    <TextView
+        android:id="@+id/TextView_chat_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="150dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="5dp"
+        android:text="hello"
+        android:textSize="40px"
+        android:gravity="end"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#d9d9d9"/>
+</LinearLayout>

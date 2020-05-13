@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "602974055599",
+    "firebase_url": "https://mafiagame-juwon.firebaseio.com",
+    "project_id": "mafiagame-juwon",
+    "storage_bucket": "mafiagame-juwon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602974055599:android:3c0a9fd30c774d0265785a",
+        "android_client_info": {
+          "package_name": "com.example.mafiagame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602974055599-jacgge47262gh88vjrlu5ip8i9p79cen.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC173nUmwFkn-oje0pE6oLA9oAGL9j4S7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602974055599-jacgge47262gh88vjrlu5ip8i9p79cen.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

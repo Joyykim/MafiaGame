@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChatActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_topBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:textSize="15sp"
+        android:background="#3C3C3C"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/TextView_roomPrsnl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:text="0"
+            android:textSize="60px"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/TextView_roomMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="/8"
+            android:textSize="60px"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/TextView_roomName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="방이름"
+            android:textSize="60px"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/GridView_member"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:numColumns="4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LinearLayout_topBar">
+
+    </GridView>
+
+
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999999"
+        app:layout_constraintBottom_toBottomOf="@+id/GridView_member"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal" />
+
+    <!--채팅 리싸이클러뷰-->
+    <Button
+        android:id="@+id/Button_chat_option"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="설정"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/LinearLayout_topBar"
+        app:layout_constraintEnd_toEndOf="@+id/LinearLayout_topBar"
+        app:layout_constraintTop_toTopOf="@+id/LinearLayout_topBar" />
+
+    <TextView
+        android:id="@+id/TextView_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:text="status"
+        android:textSize="80px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <TextView
+        android:id="@+id/TextView_myJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:text="job"
+        android:textSize="80px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbarFadeDuration="0"
+        android:scrollbarSize="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/Button_imoji2"
+        app:layout_constraintTop_toBottomOf="@+id/GridView_member" />
+
+
+    <!--입력창-->
+    <EditText
+        android:id="@+id/EditText_chat"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Button_send"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Button_send"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/white"
+        android:textSize="70px"
+        app:layout_constraintBottom_toBottomOf="@+id/Button_gameStart"
+        app:layout_constraintEnd_toStartOf="@+id/Button_chat_option"
+        app:layout_constraintTop_toTopOf="@+id/Button_gameStart" />
+
+    <Button
+        android:id="@+id/Button_gameStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="게임시작"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/Button_chat_option"
+        app:layout_constraintTop_toTopOf="@+id/Button_chat_option" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이모티콘"
+        app:layout_constraintBottom_toBottomOf="@+id/Button_imoji1"
+        app:layout_constraintEnd_toStartOf="@+id/Button_imoji1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Button_imoji1" />
+
+    <Button
+        android:id="@+id/Button_imoji1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="웃음"
+        app:layout_constraintBottom_toTopOf="@+id/EditText_chat"
+        app:layout_constraintEnd_toStartOf="@+id/Button_imoji2"/>
+
+    <Button
+        android:id="@+id/Button_imoji2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="하트"
+        app:layout_constraintEnd_toStartOf="@+id/Button_imoji3"
+        app:layout_constraintTop_toTopOf="@+id/Button_imoji1" />
+
+    <Button
+        android:id="@+id/Button_imoji3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="슬픔"
+        app:layout_constraintEnd_toStartOf="@+id/Button_imoji4"
+        app:layout_constraintTop_toTopOf="@+id/Button_imoji2" />
+
+    <Button
+        android:id="@+id/Button_imoji4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="화남"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Button_imoji3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
